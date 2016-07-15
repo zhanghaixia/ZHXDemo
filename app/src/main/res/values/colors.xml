@@ -5,4 +5,9 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorLightBlue">#02b1fb</color>
     <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+
+    <color name="colorEnterBtn">#02b1fb</color>
+    <color name="colorEnterClicked">#3c9dc5</color>
+
 </resources>

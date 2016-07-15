@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="security">
+        <item>Please select a security question</item>
+        <item>I was born?</item>
+        <item>I attended high school name?</item>
+        <item>My birthday?</item>
+        <item>My friend\'s name?</item>
+        <item>My favorite recreational sport?</item>
+        <item>My favorite song name?</item>
+        <item>My favorite food?</item>
+        <item>I now live in the city?</item>
+        <item>My favorite movie?</item>
+        <item>My father\'s name?</item>
+        <item>My mother\'s name?</item>
+    </string-array>
+</resources>

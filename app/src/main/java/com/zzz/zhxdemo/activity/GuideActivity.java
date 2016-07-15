@@ -63,7 +63,7 @@ public class GuideActivity extends CommonActivity implements ViewPager.OnPageCha
         myHandler.sendEmptyMessageDelayed(0, 10000);
     }
     @Override
-    public void initView() {
+    protected void initView() {
         // TODO Auto-generated method stub
 
         views = new ArrayList<View>();
@@ -95,7 +95,7 @@ public class GuideActivity extends CommonActivity implements ViewPager.OnPageCha
         skipText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gotoMainActivity();
+                gotoNextActivity();
             }
         });
     }
@@ -111,7 +111,7 @@ public class GuideActivity extends CommonActivity implements ViewPager.OnPageCha
                 setCurView(currentIndex);
 
             }else{
-                gotoMainActivity();
+                gotoNextActivity();
             }
         }
 
@@ -155,7 +155,9 @@ public class GuideActivity extends CommonActivity implements ViewPager.OnPageCha
         //循环取得小点图片
         for (int i = 0; i < pics.length; i++) {
             dots[i] = new ImageView(GuideActivity.this);
-            dots[i].setLayoutParams(new ViewGroup.LayoutParams(bitmap.getWidth(), bitmap.getHeight()));
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(new ViewGroup.LayoutParams(bitmap.getWidth(), bitmap.getHeight()));
+            layoutParams.setMargins(10,10,10,10);//4个参数按顺序分别是左上右下
+            dots[i].setLayoutParams(layoutParams);
             dots[i].setBackgroundResource(R.drawable.selector_dot_black_gray);
             ll.addView(dots[i]);
         }
@@ -206,14 +208,16 @@ public class GuideActivity extends CommonActivity implements ViewPager.OnPageCha
 
 
     public void enterMain(View v){
-        gotoMainActivity();
+        gotoNextActivity();
     }
 
-    private void gotoMainActivity(){
+    private void gotoNextActivity(){
         myHandler.removeMessages(0);
-        Intent intent = new Intent(GuideActivity.this, MainActivity.class);
+        Intent intent = new Intent();
+        intent.setClass(GuideActivity.this, RegisterActivity.class);
         startActivity(intent);
         GuideActivity.this.finish();
+
     }
 
 }

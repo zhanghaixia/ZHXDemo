@@ -8,4 +8,47 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="personInfoTextStyle" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">39dp</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="android:layout_marginBottom">22dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">18sp</item>
+
+    </style>
+
+    <style name="personInfoEditStyle" >
+        <item name="android:layout_width">320dp</item>
+        <item name="android:layout_height">39dp</item>
+        <item name="android:layout_marginBottom">22dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/selector_edit_bg</item>
+        <item name="android:paddingLeft">10dp</item>
+    </style>
+
+    <style name="registerErrorInfoTextStyle" >
+        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawableStart">@mipmap/ic_error_info</item>
+        <item name="android:layout_marginStart">5dp</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:text">@string/cannot_blank</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="processDialog" >
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+    </style>
+
 </resources>

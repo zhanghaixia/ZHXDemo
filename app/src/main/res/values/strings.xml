@@ -2,4 +2,36 @@
     <string name="app_name">ZHXDemo</string>
     <string name="experience_now">立即体验</string>
     <string name="skip"><u>跳过</u></string>
+
+    <!--register string-->
+    <string name="username">user name</string>
+    <string name="password">password</string>
+    <string name="confirm_pwd">Confirm Password</string>
+    <string name="gender">Gender</string>
+    <string name="age">Age</string>
+    <string name="weight">Weight</string>
+    <string name="real_name">Full name</string>
+    <string name="height">Height</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="security_answer_info_tips">Would you please fill in real information, this will help you retrieve password by answering question quickly.\n Problem (a mandatory)</string>
+    <string name="select_security_answer">Please select a security question</string>
+    <string name="question_one">question 1:</string>
+    <string name="question_two">question 2:</string>
+    <string name="question_three">question 3:</string>
+    <string name="answer">answer:</string>
+    <string name="char_length">Length 6-16 characters</string>
+    <string name="cannot_contain_spaces">Cannot contain spaces</string>
+    <string name="cannot_all_num">Cannot be the 9 bit of the following numbers</string>
+    <string name="register_now">Register Now</string>
+    <string name="centimeter">centimeter</string>
+    <string name="kg">kilogramme</string>
+    <string name="cannot_blank">This cannot be left blank</string>
+    <string name="pwd_not_match">Password not match</string>
+    <string name="pwd_unmatch">Passwords don\'t match</string>
+    <string name="reg_success">Registered successfully</string>
+    <string name="reg_failed_info_tips">Registration failed, please according to the prompt to fill out</string>
+    <string name="reg_failed_name_used">User name has been used</string>
+
+
 </resources>

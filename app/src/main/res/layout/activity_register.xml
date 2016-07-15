@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/register_layout"
+    android:background="@color/colorBlack"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.4"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        style="@style/personInfoTextStyle"
+                        android:labelFor="@+id/user_name"
+                        android:text="@string/username" />
+
+                    <TextView
+                        style="@style/personInfoTextStyle"
+                        android:labelFor="@+id/user_real_name"
+                        android:text="@string/real_name" />
+
+                    <TextView
+                        style="@style/personInfoTextStyle"
+                        android:text="@string/password" />
+
+                    <TextView
+                        style="@style/personInfoTextStyle"
+                        android:text="@string/confirm_pwd" />
+
+                    <TextView
+                        style="@style/personInfoTextStyle"
+                        android:text="@string/gender" />
+
+                    <TextView
+                        style="@style/personInfoTextStyle"
+                        android:labelFor="@+id/user_age"
+                        android:text="@string/age" />
+
+                    <TextView
+                        style="@style/personInfoTextStyle"
+                        android:labelFor="@+id/user_height"
+                        android:text="@string/height" />
+
+                    <TextView
+                        style="@style/personInfoTextStyle"
+                        android:labelFor="@+id/user_weight"
+                        android:text="@string/weight" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" >
+
+                    <EditText
+                        android:id="@+id/user_name"
+                        style="@style/personInfoEditStyle" />
+
+                    <EditText
+                        android:id="@+id/user_real_name"
+                        style="@style/personInfoEditStyle"
+                        android:layout_below="@id/user_name" />
+
+                    <EditText
+                        android:id="@+id/user_pwd_edit"
+                        android:inputType="textPassword"
+                        style="@style/personInfoEditStyle"
+                        android:layout_below="@id/user_real_name" />
+
+                    <EditText
+                        android:id="@+id/user_confirm_pwd"
+                        android:inputType="textPassword"
+                        style="@style/personInfoEditStyle"
+                        android:layout_below="@id/user_pwd_edit" />
+
+                    <RadioGroup
+                        android:id="@+id/info_sex_choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="39dp"
+                        android:layout_below="@id/user_confirm_pwd"
+                        android:layout_marginBottom="22dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/user_sex_boy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="45dp"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:drawableStart="@drawable/selector_sex_boy_bg"
+                            android:text="@string/male"
+                            android:textColor="@color/colorWhite" />
+
+                        <RadioButton
+                            android:id="@+id/user_sex_girl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:drawableStart="@drawable/selector_sex_girl_bg"
+                            android:text="@string/female"
+                            android:textColor="@color/colorWhite" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/user_age"
+                        android:inputType="number"
+                        android:digits="0123456789"
+                        style="@style/personInfoEditStyle"
+                        android:layout_below="@id/info_sex_choice" />
+
+                    <EditText
+                        android:id="@+id/user_height"
+                        android:inputType="number"
+                        android:digits="0123456789"
+                        style="@style/personInfoEditStyle"
+                        android:layout_below="@id/user_age" />
+
+                    <EditText
+                        android:id="@+id/user_weight"
+                        android:inputType="numberDecimal"
+                        style="@style/personInfoEditStyle"
+                        android:layout_below="@id/user_height" />
+
+                    <TextView
+                        android:id="@+id/name_error_text"
+                        style="@style/registerErrorInfoTextStyle"
+                        android:layout_alignTop="@id/user_name"
+                        android:layout_toEndOf="@id/user_name" />
+
+                    <TextView
+                        android:id="@+id/real_name_error_text"
+                        style="@style/registerErrorInfoTextStyle"
+                        android:layout_alignTop="@id/user_real_name"
+                        android:layout_toEndOf="@id/user_real_name" />
+
+                    <RelativeLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+
+                        android:layout_above="@id/user_confirm_pwd"
+                        android:layout_toEndOf="@id/user_pwd_edit"
+                        >
+
+                        <TextView
+                            android:id="@+id/pwd_error_one"
+                            style="@style/registerErrorInfoTextStyle"
+                            android:layout_marginBottom="0dp"
+                            android:drawableStart="@mipmap/ic_warm_info"
+                            android:background="@null"
+                            android:visibility="visible"
+                            android:text="@string/char_length" />
+
+                        <TextView
+                            android:id="@+id/pwd_error_two"
+                            style="@style/registerErrorInfoTextStyle"
+                            android:layout_below="@id/pwd_error_one"
+                            android:layout_marginBottom="0dp"
+                            android:drawableStart="@mipmap/ic_warm_info"
+                            android:background="@null"
+                            android:visibility="visible"
+                            android:text="@string/cannot_contain_spaces" />
+
+                        <TextView
+                            android:id="@+id/pwd_error_three"
+                            style="@style/registerErrorInfoTextStyle"
+                            android:layout_below="@id/pwd_error_two"
+                            android:layout_marginBottom="0dp"
+                            android:drawableStart="@mipmap/ic_warm_info"
+                            android:background="@null"
+                            android:visibility="visible"
+                            android:text="@string/cannot_all_num" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/confirm_pwd_error_text"
+                        style="@style/registerErrorInfoTextStyle"
+                        android:layout_alignTop="@id/user_confirm_pwd"
+                        android:layout_toEndOf="@id/user_confirm_pwd" />
+
+                    <TextView
+                        android:id="@+id/age_error_text"
+                        style="@style/registerErrorInfoTextStyle"
+                        android:layout_alignTop="@id/user_age"
+                        android:layout_toEndOf="@id/user_age" />
+                    <TextView
+                        android:id="@+id/height_centimeter"
+                        android:layout_marginStart="5dp"
+                        style="@style/personInfoTextStyle"
+                        android:layout_alignTop="@id/user_height"
+                        android:layout_toEndOf="@id/user_height"
+                        android:text="@string/centimeter"
+                        />
+                    <TextView
+                        android:id="@+id/height_error_text"
+                        style="@style/registerErrorInfoTextStyle"
+                        android:layout_alignTop="@id/user_height"
+                        android:layout_toEndOf="@id/height_centimeter" />
+
+                    <TextView
+                        android:id="@+id/weight_kg"
+                        android:layout_marginStart="5dp"
+                        style="@style/personInfoTextStyle"
+                        android:layout_alignTop="@id/user_weight"
+                        android:layout_toEndOf="@id/user_weight"
+                        android:text="@string/kg"
+                        />
+                    <TextView
+                        android:id="@+id/weight_error_text"
+                        style="@style/registerErrorInfoTextStyle"
+                        android:layout_alignTop="@id/user_weight"
+                        android:layout_toEndOf="@id/weight_kg" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@mipmap/ic_must_logo"
+                    android:text="@string/security_answer_info_tips"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            style="@style/personInfoTextStyle"
+                            android:drawablePadding="5dp"
+                            android:drawableStart="@mipmap/ic_must_logo"
+                            android:text="@string/question_one" />
+
+                        <TextView
+                            style="@style/personInfoTextStyle"
+                            android:text="@string/answer" />
+
+                        <TextView
+                            style="@style/personInfoTextStyle"
+                            android:text="@string/question_two" />
+
+                        <TextView
+                            style="@style/personInfoTextStyle"
+                            android:text="@string/answer" />
+
+                        <TextView
+                            style="@style/personInfoTextStyle"
+                            android:text="@string/question_three" />
+
+                        <TextView
+                            style="@style/personInfoTextStyle"
+                            android:text="@string/answer" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="vertical" >
+
+                        <Spinner
+                            android:id="@+id/question_one_spinner"
+                            style="@style/personInfoEditStyle"
+                            android:background="@mipmap/spinner_bg"
+                            android:entries="@array/security" />
+
+                        <EditText
+                            android:id="@+id/user_answer_one"
+                            style="@style/personInfoEditStyle" />
+
+                        <Spinner
+                            android:id="@+id/question_two_spinner"
+                            style="@style/personInfoEditStyle"
+                            android:background="@mipmap/spinner_bg"
+                            android:entries="@array/security" />
+
+                        <EditText
+                            android:id="@+id/user_answer_two"
+                            style="@style/personInfoEditStyle" />
+
+                        <Spinner
+                            android:id="@+id/question_three_spinner"
+                            style="@style/personInfoEditStyle"
+                            android:background="@mipmap/spinner_bg"
+                            android:entries="@array/security" />
+
+                        <EditText
+                            android:id="@+id/user_answer_three"
+                            style="@style/personInfoEditStyle" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/register_btn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/selector_enter_btn_bg"
+            android:gravity="center"
+            android:text="@string/register_now"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>
