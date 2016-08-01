@@ -214,7 +214,7 @@ public class GuideActivity extends CommonActivity implements ViewPager.OnPageCha
     private void gotoNextActivity(){
         myHandler.removeMessages(0);
         Intent intent = new Intent();
-        intent.setClass(GuideActivity.this, RegisterActivity.class);
+        intent.setClass(GuideActivity.this, MainActivity.class);
         startActivity(intent);
         GuideActivity.this.finish();
 

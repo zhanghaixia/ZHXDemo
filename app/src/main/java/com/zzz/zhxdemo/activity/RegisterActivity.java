@@ -155,7 +155,7 @@ public class RegisterActivity extends CommonActivity implements View.OnClickList
             switch (msg.what) {
                 case RG_SUCCESS:
                     warnDialog.dismissWarnDialog();
-                    gotoActivity(RegisterActivity.this, LoginActivity.class);
+                   // gotoActivity(RegisterActivity.this, NavigationActivity.class);
                     RegisterActivity.this.finish();
                     break;
                 case RG_FAIL:

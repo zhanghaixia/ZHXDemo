@@ -32,6 +32,12 @@
     <string name="reg_success">Registered successfully</string>
     <string name="reg_failed_info_tips">Registration failed, please according to the prompt to fill out</string>
     <string name="reg_failed_name_used">User name has been used</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 
 
 </resources>
