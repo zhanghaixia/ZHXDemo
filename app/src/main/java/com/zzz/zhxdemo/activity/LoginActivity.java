@@ -253,7 +253,7 @@ public class LoginActivity extends Activity/* implements SeekBar.OnSeekBarChange
     }
 
     private boolean checkLogin(){
-        db = MainActivity.db;
+        db = MainCropActivity.db;
         String name = nameText.getText().toString().trim();
         String pwd = pwdText.getText().toString().trim();
         Cursor cursor = db.rawQuery("select * from TBL_PERSONAL_INFO where name = ?", new String[] { name });

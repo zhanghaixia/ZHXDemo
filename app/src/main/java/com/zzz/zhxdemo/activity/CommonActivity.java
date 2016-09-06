@@ -1,6 +1,5 @@
 package com.zzz.zhxdemo.activity;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -8,6 +7,7 @@ import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.media.AudioManager;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.text.Spanned;
 import android.util.DisplayMetrics;
@@ -23,7 +23,7 @@ import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public abstract class CommonActivity extends Activity {
+public class CommonActivity extends AppCompatActivity {
 
     private AudioManager am;
 
@@ -39,7 +39,7 @@ public abstract class CommonActivity extends Activity {
         setContentView(R.layout.activity_common);
     }
 
-     protected abstract void initView();
+     protected  void initView(){};
 
      public void gotoActivity(Context packageContext, Class<?> cls) {
          Intent intent = new Intent(packageContext, cls);
